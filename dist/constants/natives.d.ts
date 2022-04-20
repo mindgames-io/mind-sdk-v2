@@ -26,6 +26,6 @@ export declare const NATIVE: {
     11297108109: Palm;
     1285: Movr;
     1313161554: Aurora;
-    1313161555: Aurora;
     1313161556: Aurora;
+    1337: Aurora;
 };

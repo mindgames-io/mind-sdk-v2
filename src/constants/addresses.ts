@@ -46,7 +46,7 @@ export const FACTORY_ADDRESS: AddressMap = {
   [ChainId.MOONRIVER]: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
   [ChainId.AURORA]: '',
   [ChainId.AURORA_TESTNET]: '',
-  [ChainId.AURORA_PRIVATENET]: '0x43ca3D2C94be00692D207C6A1e60D8B325c6f12f',
+  [ChainId.AURORA_PRIVATENET]: '0x43ca3D2C94be00692D207C6A1e60D8B325c6f12f'
 }
 
 export const ROUTER_ADDRESS: AddressMap = {
@@ -108,7 +108,10 @@ export const SUSHI_ADDRESS: AddressMap = {
   [ChainId.OKEX_TESTNET]: '',
   [ChainId.CELO]: '',
   [ChainId.PALM]: '',
-  [ChainId.PALM_TESTNET]: ''
+  [ChainId.PALM_TESTNET]: '',
+  [ChainId.AURORA]: '',
+  [ChainId.AURORA_TESTNET]: '',
+  [ChainId.AURORA_PRIVATENET]: '0x73511669fd4dE447feD18BB79bAFeAC93aB7F31f'
 }
 
 export const MASTERCHEF_ADDRESS: AddressMap = {
@@ -137,7 +140,10 @@ export const MASTERCHEF_ADDRESS: AddressMap = {
   [ChainId.OKEX_TESTNET]: '',
   [ChainId.CELO]: '',
   [ChainId.PALM]: '',
-  [ChainId.PALM_TESTNET]: ''
+  [ChainId.PALM_TESTNET]: '',
+  [ChainId.AURORA]: '',
+  [ChainId.AURORA_TESTNET]: '',
+  [ChainId.AURORA_PRIVATENET]: '0xAbB12158488d9C9Bd52C14B9AE4C835eCE4A6e13'
 }
 
 export const BAR_ADDRESS: AddressMap = {
@@ -166,7 +172,10 @@ export const BAR_ADDRESS: AddressMap = {
   [ChainId.OKEX_TESTNET]: '',
   [ChainId.CELO]: '',
   [ChainId.PALM]: '',
-  [ChainId.PALM_TESTNET]: ''
+  [ChainId.PALM_TESTNET]: '',
+  [ChainId.AURORA]: '',
+  [ChainId.AURORA_TESTNET]: '',
+  [ChainId.AURORA_PRIVATENET]: '0xC469e7aE4aD962c30c7111dc580B4adbc7E914DD'
 }
 
 export const MAKER_ADDRESS: AddressMap = {
@@ -195,7 +204,10 @@ export const MAKER_ADDRESS: AddressMap = {
   [ChainId.OKEX_TESTNET]: '',
   [ChainId.CELO]: '',
   [ChainId.PALM]: '',
-  [ChainId.PALM_TESTNET]: ''
+  [ChainId.PALM_TESTNET]: '',
+  [ChainId.AURORA]: '',
+  [ChainId.AURORA_TESTNET]: '',
+  [ChainId.AURORA_PRIVATENET]: '0xED8CAB8a931A4C0489ad3E3FB5BdEA84f74fD23E'
 }
 
 export const TIMELOCK_ADDRESS: AddressMap = {
@@ -556,5 +568,4 @@ export const MULTICALL2_ADDRESS: AddressMap = {
   [ChainId.AURORA]: '',
   [ChainId.AURORA_TESTNET]: '',
   [ChainId.AURORA_PRIVATENET]: '0x6d925938Edb8A16B3035A4cF34FAA090f490202a'
-  
 }
