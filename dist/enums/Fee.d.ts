@@ -1,3 +1,3 @@
 export declare enum Fee {
-    DEFAULT = 35
+    DEFAULT = 30
 }
