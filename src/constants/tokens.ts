@@ -16,7 +16,7 @@ export const USDC: TokenMap = {
   [ChainId.OKEX]: new Token(ChainId.OKEX, USDC_ADDRESS[ChainId.OKEX], 18, 'USDC', 'USD Coin'),
   [ChainId.XDAI]: new Token(ChainId.XDAI, USDC_ADDRESS[ChainId.XDAI], 6, 'USDC', 'USD Coin'),
   [ChainId.ARBITRUM]: new Token(ChainId.ARBITRUM, USDC_ADDRESS[ChainId.ARBITRUM], 6, 'USDC', 'USD Coin'),
-  [ChainId.AURORA]: new Token(ChainId.AURORA, USDC_ADDRESS[ChainId.AURORA], 6, 'USDC', 'USD Coin'),
+  [ChainId.AURORA]: new Token(ChainId.AURORA, USDC_ADDRESS[ChainId.AURORA], 6, 'USDC', 'USD Coin')
 }
 
 export const WETH9: TokenMap = {
@@ -124,13 +124,7 @@ export const WNATIVE: TokenMap = {
     'WMOVR',
     'Wrapped Moonriver'
   ),
-  [ChainId.AURORA]: new Token(
-    ChainId.AURORA,
-    WNATIVE_ADDRESS[ChainId.AURORA],
-    18,
-    'WETH',
-    'Wrapped ETH'
-  ),
+  [ChainId.AURORA]: new Token(ChainId.AURORA, WNATIVE_ADDRESS[ChainId.AURORA], 18, 'WETH', 'Wrapped ETH'),
   [ChainId.AURORA_TESTNET]: new Token(
     ChainId.AURORA_TESTNET,
     WNATIVE_ADDRESS[ChainId.AURORA_TESTNET],

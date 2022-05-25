@@ -11,4 +11,4 @@ export { Movr } from './Movr'
 export { Okex } from './Okex'
 export { xDai } from './xDai'
 export { Palm } from './Palm'
-export { Aurora } from './Aurora';
+export { Aurora } from './Aurora'
