@@ -1988,7 +1988,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(currencyAmountA, currencyAmountB) {
     var currencyAmounts = currencyAmountA.currency.sortsBefore(currencyAmountB.currency) // does safety checks
     ? [currencyAmountA, currencyAmountB] : [currencyAmountB, currencyAmountA];
-    this.liquidityToken = new Token(currencyAmounts[0].currency.chainId, Pair.getAddress(currencyAmounts[0].currency, currencyAmounts[1].currency), 18, 'Jewel-LP', 'DFK');
+    this.liquidityToken = new Token(currencyAmounts[0].currency.chainId, Pair.getAddress(currencyAmounts[0].currency, currencyAmounts[1].currency), 18, 'Cell LP Token', 'CELL-LP');
     this.tokenAmounts = currencyAmounts;
   }
 

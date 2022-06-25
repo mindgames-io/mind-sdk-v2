@@ -1,8 +1,8 @@
 {
   "name": "@mindgames/sdk",
   "license": "MIT",
-  "version": "5.0.0-canary.72",
-  "description": "🛠 A SDK for building applications",
+  "version": "1.0.0",
+  "description": "🛠 A SDK for mindgames defi applications",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -17,7 +17,8 @@
     "test": "tsdx test",
     "prepublishOnly": "tsdx build",
     "prepare": "husky install",
-    "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'"
+    "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
+    "refresh": "yarn run lint && yarn run prettier && yarn run prepare && yarn run prepublishOnly"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

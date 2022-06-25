@@ -30,8 +30,8 @@ export class Pair {
       currencyAmounts[0].currency.chainId,
       Pair.getAddress(currencyAmounts[0].currency, currencyAmounts[1].currency),
       18,
-      'Jewel-LP',
-      'DFK'
+      'Cell LP Token',
+      'CELL-LP'
     )
     this.tokenAmounts = currencyAmounts as [CurrencyAmount<Token>, CurrencyAmount<Token>]
   }
