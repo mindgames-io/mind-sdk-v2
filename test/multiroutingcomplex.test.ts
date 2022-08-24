@@ -334,8 +334,8 @@ function exportNetwork(network: Network, from: RToken, to: RToken, route: MultiR
       edges: edges,
   };\n`
 
-  const fs = require('fs')
-  fs.writeFileSync('D:/Info/Notes/GraphVisualization/data.js', nodes + edges + data)
+  // const fs = require('fs')
+  // fs.writeFileSync('D:/Info/Notes/GraphVisualization/data.js', nodes + edges + data)
 }
 
 const network = createNetwork(rnd, 20)

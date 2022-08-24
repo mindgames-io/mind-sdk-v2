@@ -2868,7 +2868,7 @@ var getTypedDataBento = function getTypedDataBento(message, chainId) {
   };
 };
 var getTypeHash = function getTypeHash(typedData) {
-  var message = eip712.getMessage(typedData, true).toString('hex');
+  var message = eip712.getMessage(typedData, true).toString();
   return "0x" + message;
 };
 
@@ -3617,67 +3617,62 @@ var Graph = /*#__PURE__*/function () {
     // const usedPools = new Map<string, boolean>();
     // route.legs.forEach(l => usedPools.set(l.address, l.token === allPools.get(l.address)?.token0))
     var fromVert = this.tokens.get(from);
-    var toVert = this.tokens.get(to);
-    var initValue = fromVert.bestIncome * fromVert.price / toVert.price;
+    var toVert = this.tokens.get(to); // const initValue = (fromVert.bestIncome * fromVert.price) / toVert.price
+
     var route = new Set();
 
     for (var v = toVert; v !== fromVert; v = v.getNeibour(v.bestSource)) {
       if (v.bestSource) route.add(v.bestSource);
-    }
+    } // function edgeStyle(e: Edge) {
+    //   const finish = e.vert1.bestSource === e
+    //   const start = e.vert0.bestSource === e
+    //   let label
+    //   if (e.bestEdgeIncome === -1) label = 'label: "low_liq"'
+    //   if (e.bestEdgeIncome !== 0) label = `label: "${print((e.bestEdgeIncome / initValue - 1) * 100, 3)}%"`
+    //   const edgeValue = route.has(e) ? 'value: 2' : undefined
+    //   let arrow
+    //   if (finish && start) arrow = 'arrows: "from,to"'
+    //   if (finish) arrow = 'arrows: "to"'
+    //   if (start) arrow = 'arrows: "from"'
+    //   return ['', label, edgeValue, arrow].filter(a => a !== undefined).join(', ')
+    // }
+    // function print(n: number, digits: number) {
+    //   let out
+    //   if (n === 0) out = '0'
+    //   else {
+    //     const n0 = n > 0 ? n : -n
+    //     const shift = digits - Math.ceil(Math.log(n0) / Math.LN10)
+    //     if (shift <= 0) out = `${Math.round(n0)}`
+    //     else {
+    //       const mult = Math.pow(10, shift)
+    //       out = `${Math.round(n0 * mult) / mult}`
+    //     }
+    //     if (n < 0) out = -out
+    //   }
+    //   return out
+    // }
+    // function nodeLabel(v: Vertice) {
+    //   const value = (v.bestIncome * v.price) / toVert.price
+    //   const income = `${print(value, 3)}`
+    //   const total = `${print(v.bestTotal, 3)}`
+    //   // const income = `${print((value/initValue-1)*100, 3)}%`
+    //   // const total = `${print((v.bestTotal/initValue-1)*100, 3)}%`
+    //   const checkLine = v.checkLine === -1 ? undefined : `${v.checkLine}`
+    //   return [checkLine, income, total].filter(a => a !== undefined).join(':')
+    // }
+    // const nodes = `var nodes = new vis.DataSet([
+    //   ${this.vertices.map(t => `{ id: ${t.token.name}, label: "${nodeLabel(t)}"}`).join(',\n\t\t')}
+    // ]);\n`
+    // const edges = `var edges = new vis.DataSet([
+    //   ${this.edges.map(p => `{ from: ${p.vert0.token.name}, to: ${p.vert1.token.name}${edgeStyle(p)}}`).join(',\n\t\t')}
+    // ]);\n`
+    // const data = `var data = {
+    //     nodes: nodes,
+    //     edges: edges,
+    // };\n`
+    // const fs = require('fs')
+    // fs.writeFileSync('D:/Info/Notes/GraphVisualization/data.js', nodes + edges + data)
 
-    function edgeStyle(e) {
-      var finish = e.vert1.bestSource === e;
-      var start = e.vert0.bestSource === e;
-      var label;
-      if (e.bestEdgeIncome === -1) label = 'label: "low_liq"';
-      if (e.bestEdgeIncome !== 0) label = "label: \"" + print((e.bestEdgeIncome / initValue - 1) * 100, 3) + "%\"";
-      var edgeValue = route.has(e) ? 'value: 2' : undefined;
-      var arrow;
-      if (finish && start) arrow = 'arrows: "from,to"';
-      if (finish) arrow = 'arrows: "to"';
-      if (start) arrow = 'arrows: "from"';
-      return ['', label, edgeValue, arrow].filter(function (a) {
-        return a !== undefined;
-      }).join(', ');
-    }
-
-    function print(n, digits) {
-      var out;
-      if (n === 0) out = '0';else {
-        var n0 = n > 0 ? n : -n;
-        var shift = digits - Math.ceil(Math.log(n0) / Math.LN10);
-        if (shift <= 0) out = "" + Math.round(n0);else {
-          var mult = Math.pow(10, shift);
-          out = "" + Math.round(n0 * mult) / mult;
-        }
-        if (n < 0) out = -out;
-      }
-      return out;
-    }
-
-    function nodeLabel(v) {
-      var value = v.bestIncome * v.price / toVert.price;
-      var income = "" + print(value, 3);
-      var total = "" + print(v.bestTotal, 3); // const income = `${print((value/initValue-1)*100, 3)}%`
-      // const total = `${print((v.bestTotal/initValue-1)*100, 3)}%`
-
-      var checkLine = v.checkLine === -1 ? undefined : "" + v.checkLine;
-      return [checkLine, income, total].filter(function (a) {
-        return a !== undefined;
-      }).join(':');
-    }
-
-    var nodes = "var nodes = new vis.DataSet([\n      " + this.vertices.map(function (t) {
-      return "{ id: " + t.token.name + ", label: \"" + nodeLabel(t) + "\"}";
-    }).join(',\n\t\t') + "\n    ]);\n";
-    var edges = "var edges = new vis.DataSet([\n      " + this.edges.map(function (p) {
-      return "{ from: " + p.vert0.token.name + ", to: " + p.vert1.token.name + edgeStyle(p) + "}";
-    }).join(',\n\t\t') + "\n    ]);\n";
-    var data = "var data = {\n        nodes: nodes,\n        edges: edges,\n    };\n";
-
-    var fs = require('fs');
-
-    fs.writeFileSync('D:/Info/Notes/GraphVisualization/data.js', nodes + edges + data);
   };
 
   _proto3.findBestPath = function findBestPath(from, to, amountIn) {
