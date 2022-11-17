@@ -31,7 +31,7 @@ var ChainId;
   ChainId[ChainId["BSC"] = 56] = "BSC";
   ChainId[ChainId["BSC_TESTNET"] = 97] = "BSC_TESTNET";
   ChainId[ChainId["ARBITRUM"] = 42161] = "ARBITRUM";
-  ChainId[ChainId["ARBITRUM_TESTNET"] = 79377087078960] = "ARBITRUM_TESTNET";
+  ChainId[ChainId["ARBITRUM_TESTNET"] = 421613] = "ARBITRUM_TESTNET";
   ChainId[ChainId["MOONBEAM_TESTNET"] = 1287] = "MOONBEAM_TESTNET";
   ChainId[ChainId["AVALANCHE"] = 43114] = "AVALANCHE";
   ChainId[ChainId["AVALANCHE_TESTNET"] = 43113] = "AVALANCHE_TESTNET";
