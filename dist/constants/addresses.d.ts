@@ -13,6 +13,7 @@ export declare const CELL_WNEAR: AddressMap;
 export declare const CELL_WETH: AddressMap;
 export declare const CELL_RUSD: AddressMap;
 export declare const CELL_WBTC: AddressMap;
+export declare const WETH_USDC: AddressMap;
 export declare const TIMELOCK_ADDRESS: AddressMap;
 export declare const BENTOBOX_ADDRESS: AddressMap;
 export declare const KASHI_ADDRESS: AddressMap;
