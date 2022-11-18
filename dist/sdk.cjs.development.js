@@ -1289,6 +1289,7 @@ var _1000 = /*#__PURE__*/JSBI.BigInt(1000);
 
 var _SOLIDITY_TYPE_MAXIMA;
 var INIT_CODE_HASH = '0x5334ad97076e94529ef7d4f239c03b57694046068855bedf447975114edbc3ed';
+var INIT_CODE_HASH_ARBITRUM = '0x6ff4e7d6d362d5e5b0c7631942a272d46d59abada24f9cd181af45b59d8f477b';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000);
 
 (function (SolidityType) {
@@ -5538,6 +5539,7 @@ exports.Heco = Heco;
 exports.HybridComputeLiquidity = HybridComputeLiquidity;
 exports.HybridgetY = HybridgetY;
 exports.INIT_CODE_HASH = INIT_CODE_HASH;
+exports.INIT_CODE_HASH_ARBITRUM = INIT_CODE_HASH_ARBITRUM;
 exports.INTEREST_ELASTICITY = INTEREST_ELASTICITY;
 exports.InsufficientInputAmountError = InsufficientInputAmountError;
 exports.InsufficientReservesError = InsufficientReservesError;
