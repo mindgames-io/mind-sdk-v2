@@ -1,4 +1,14 @@
-import { FACTORY_ADDRESS, FIVE, MINIMUM_LIQUIDITY, ONE, ZERO, _1000, _997 } from '../constants'
+import {
+  FACTORY_ADDRESS,
+  FIVE,
+  LP_IDENTIFIER_NAME,
+  LP_IDENTIFIER_SYMBOL,
+  MINIMUM_LIQUIDITY,
+  ONE,
+  ZERO,
+  _1000,
+  _997
+} from '../constants'
 import { InsufficientInputAmountError, InsufficientReservesError } from '../errors'
 
 import { BigintIsh } from '../types'
@@ -15,10 +25,12 @@ export class Pair {
   private readonly tokenAmounts: [CurrencyAmount<Token>, CurrencyAmount<Token>]
 
   public static getAddress(tokenA: Token, tokenB: Token): string {
+    const chainId = tokenA.chainId
     return computePairAddress({
-      factoryAddress: FACTORY_ADDRESS[tokenA.chainId],
+      factoryAddress: FACTORY_ADDRESS[chainId],
       tokenA,
-      tokenB
+      tokenB,
+      chainId
     })
   }
 
@@ -30,8 +42,8 @@ export class Pair {
       currencyAmounts[0].currency.chainId,
       Pair.getAddress(currencyAmounts[0].currency, currencyAmounts[1].currency),
       18,
-      'Cell LP Token',
-      'CELL-LP'
+      LP_IDENTIFIER_NAME[currencyAmounts[0].currency.chainId],
+      LP_IDENTIFIER_SYMBOL[currencyAmounts[0].currency.chainId]
     )
     this.tokenAmounts = currencyAmounts as [CurrencyAmount<Token>, CurrencyAmount<Token>]
   }

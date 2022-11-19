@@ -4,8 +4,6 @@ export * from './kashi';
 export * from './natives';
 export * from './numbers';
 export * from './tokens';
-export declare const INIT_CODE_HASH: string;
-export declare const INIT_CODE_HASH_ARBITRUM: string;
 export declare const MINIMUM_LIQUIDITY: JSBI;
 export declare enum SolidityType {
     uint8 = "uint8",
