@@ -6700,8 +6700,8 @@ tsconfig-paths@^3.14.1:
 
 tsdx@^0.14.1:
   version "0.14.1"
-  resolved "https://registry.yarnpkg.com/tsdx/-/tsdx-0.14.1.tgz#8771d509b6fc523ad971bae3a63ebe3a88355ab3"
-  integrity sha512-keHmFdCL2kx5nYFlBdbE3639HQ2v9iGedAFAajobrUTH2wfX0nLPdDhbHv+GHLQZqf0c5ur1XteE8ek/+Eyj5w==
+  resolved "https://pkgs.dev.azure.com/MediciVentures/FincAPI/_packaging/Library/npm/registry/tsdx/-/tsdx-0.14.1.tgz#8771d509b6fc523ad971bae3a63ebe3a88355ab3"
+  integrity sha1-h3HVCbb8UjrZcbrjpj6+Oog1WrM=
   dependencies:
     "@babel/core" "^7.4.4"
     "@babel/helper-module-imports" "^7.0.0"
