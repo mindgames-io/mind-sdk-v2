@@ -16,9 +16,9 @@
     "watch": "tsdx watch",
     "test": "tsdx test",
     "prepublishOnly": "tsdx build",
-    "prepare": "husky install",
+    "prepares": "husky install",
     "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
-    "refresh": "yarn run lint && yarn run prettier && yarn run prepare && yarn run prepublishOnly"
+    "refresh": "yarn run lint && yarn run prettier && yarn run prepares && yarn run prepublishOnly"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
