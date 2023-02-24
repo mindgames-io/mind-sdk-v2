@@ -1,5 +1,5 @@
-import { AddressMap } from '../types';
-import { ChainId } from '../enums';
+import { AddressMap } from "../types";
+import { ChainId } from "../enums";
 export declare const USDC_ADDRESS: AddressMap;
 export declare const FACTORY_ADDRESS: AddressMap;
 export declare const ROUTER_ADDRESS: AddressMap;
