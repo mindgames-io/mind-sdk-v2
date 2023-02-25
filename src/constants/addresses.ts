@@ -671,7 +671,7 @@ export const LP_IDENTIFIER_NAME = {
   [ChainId.AURORA_TESTNET]: "tCell LP Token",
   [ChainId.AURORA_PRIVATENET]: "tCell LP Token",
   [ChainId.ARBITRUM]: "Cortex LP Token",
-  [ChainId.ARBITRUM_TESTNET]: "tCortex LP Token"
+  [ChainId.ARBITRUM_TESTNET]: "Cortex LP Token"
 };
 
 export const LP_IDENTIFIER_SYMBOL = {
@@ -704,5 +704,5 @@ export const LP_IDENTIFIER_SYMBOL = {
   [ChainId.AURORA_TESTNET]: "tCELL-LP",
   [ChainId.AURORA_PRIVATENET]: "tCELL-LP",
   [ChainId.ARBITRUM]: "CRX-LP",
-  [ChainId.ARBITRUM_TESTNET]: "tCRX-LP"
+  [ChainId.ARBITRUM_TESTNET]: "CRX-LP"
 };
